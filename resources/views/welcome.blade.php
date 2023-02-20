@@ -1,0 +1,4 @@
+{{ $email }} 
+{{ $firstName }}
+{{ $lastName }}
+{{ $avatar }}
