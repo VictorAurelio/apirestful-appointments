@@ -524,4 +524,23 @@ class LocalController extends Controller
   
       return $array;
     }
+
+    public function delete($id) {
+      $array = ['error' => ''];
+      $local = Local::find($id);
+      if($local) {
+        if($local->user_id === $this->isSignedIn->id){
+          $delLoc = Local::where('id', $id);
+          $delLoc->delete();
+          $array['success'] = 'Local deletado com sucesso.';
+        }else{
+          $array['error'] = 'Não é possível deletar um local que não é seu.';
+          return $array;
+        }
+      }else {
+        $array['error'] = 'Local inexistente.';
+        return $array;
+      }
+      return $array;
+    }
 }

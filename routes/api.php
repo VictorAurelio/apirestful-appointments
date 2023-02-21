@@ -56,3 +56,7 @@ Route::get('/search', [LocalController::class, 'search']);
 //Definir datas disponiveis (admin/usuario que criou o local) e realizar agendamento (qualquer usuario)
 Route::post('/local/{id}/availability', [LocalController::class, 'setAvailability']);
 Route::post('/local/{id}/appointment', [LocalController::class, 'setAppointment']);
+
+//Deletar local e agendamento
+Route::delete('/local/{id}', [LocalController::class, 'delete']);
+Route::delete('/user/appointment/{id}', [UserController::class, 'deleteAppointment']);

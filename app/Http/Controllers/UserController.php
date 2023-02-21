@@ -58,6 +58,25 @@ class UserController extends Controller
     return $array;
   }
 
+  public function deleteAppointment($id) {
+    $array = ['error' => ''];
+    $appointment = UserAppointment::find($id);
+    if($appointment) {
+      if($appointment->user_id === $this->isSignedIn->id){
+        $delApp = UserAppointment::where('id', $id);
+        $delApp->delete();
+        $array['success'] = 'Agendamento cancelado com sucesso.';
+      }else{
+        $array['error'] = 'Não é possível cancelar um agendamento que não é seu.';
+        return $array;
+      }
+    }else {
+      $array['error'] = 'Agendamento inexistente.';
+      return $array;
+    }
+    return $array;
+  }
+
   public function update(Request $request) {
     $array = ['error' => ''];
     
