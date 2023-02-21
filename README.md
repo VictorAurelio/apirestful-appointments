@@ -1,6 +1,7 @@
 <h1>Versões utilizadas:</h1>
-<h2>PHP 8.2|<br>Composer 2.5.2|<br>Laravel Framework 9.52.0|<br>Apache/2.4.54|<br>MySQL - MariaDB</h2>
+<h2>|PHP 8.2|<br>|Composer 2.5.2|<br>|Laravel Framework 9.52.0|<br>|Apache/2.4.54|<br>|MySQL - MariaDB</h2>
 <h3>Funcionalidades testadas com Insomnia</h3>
+<hr>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
